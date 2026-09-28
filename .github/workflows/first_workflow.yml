@@ -4,7 +4,7 @@ on: push
 
 jobs:
     first_job:
-        runs_on: ubuntu-latest
+        runs-on: ubuntu-latest
         steps:
         - name: Welcome message
           run: echo "Welcome to my firt workflow"
@@ -14,4 +14,3 @@ jobs:
 
         - name: read file
           run: cat README.md
-          
