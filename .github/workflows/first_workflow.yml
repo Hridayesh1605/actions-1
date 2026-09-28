@@ -9,12 +9,12 @@ jobs:
 
         - name: Actions
           uses: actions/checkout@v7
-          
+
         - name: Welcome message
-          run: echo "Welcome to my firt workflow"
+          run: |
+            echo "Welcome to my firt workflow"
+            ls -ltrh
+            cat README.md
 
-        - name: list files
-          run: ls
-
-        - name: read file
-          run: cat README.md
+        - name: Cowsay message
+          run: cowsay -f dragon "Run for cover...... I'm dragon .... Rawrrrrrrr" >> dragon.txt
