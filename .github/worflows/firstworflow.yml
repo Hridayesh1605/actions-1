@@ -5,7 +5,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
     - name: Welcome Message
-      run: echo "Welcome to my irst workflow"
+      run: echo "Testing my first workflow"
 
     - name: List files
       run: ls
