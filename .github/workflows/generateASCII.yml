@@ -4,7 +4,7 @@ on: push
 
 jobs:
     ASCII_work:
-      runs_on: ubuntu_latest
+      runs-on: ubuntu-latest
       steps:
       - name: Checkout action
         uses: actions/checkout@v7.0.1
@@ -12,7 +12,7 @@ jobs:
       - name: install cowsay
         run: sudo apt update && sudo apt install cowsay -y
 
-      - name:ASCII artwork
+      - name: ASCII artwork
         run: cowsay -f dragon "Run for cover, I am dragon ..... RAWR...." >> dragon.txt
 
       - name: Read file
