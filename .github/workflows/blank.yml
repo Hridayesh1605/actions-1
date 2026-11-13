@@ -6,12 +6,14 @@ jobs:
     steps:
     - name: Action repo
       uses: actions/checkout@v7.0.1
-      
+
     - name: Welcome Message
-      run: echo "Welcome to my irst workflow"
+      run: |
+        echo "Welcome to my irst workflow"
+        ls -ltrh
+        cat README.md
 
-    - name: List files
-      run: ls
+    - name: Generate ASCII Artwork
+      run: cowsay -f dragon "Run for cover, I am dragon ..... RAWR...." >> dragon.txt
 
-    - name: Read File
-      run: cat README.md
+
