@@ -26,18 +26,23 @@ jobs:
 
     Job2:
       runs-on: ubuntu-latest
+      needs: ASCII_work
       steps:
       - name: Search Existing File
-        run: grep "dragon" dragon.txt
+        run: grep -i "dragon" dragon.txt
 
       - name: sleep for 10 secs
         run: sleep 10
              
     Job3:
         runs-on: ubuntu-latest
+        needs: [ASCII_work,Job2]
         steps:
         - name: sleep 10secs
           run: sleep 10
+
+        - name: Reading File
+          run: cat dragon.txt
 
         - name: deployement
           run: echo "deploying .... ... ..."
