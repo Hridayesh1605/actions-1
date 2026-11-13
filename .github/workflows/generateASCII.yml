@@ -25,20 +25,20 @@ jobs:
         run: sleep 20
 
     Job2:
-        runs-on: ubuntu-latest
-        steps:
-            -name: Search Existing File
-             run: grep "dragon" dragon.txt
+      runs-on: ubuntu-latest
+      steps:
+      - name: Search Existing File
+        run: grep "dragon" dragon.txt
 
-            -name: sleep for 10 secs
-             run: sleep 10
+      - name: sleep for 10 secs
+        run: sleep 10
              
     Job3:
         runs-on: ubuntu-latest
         steps:
-            -name: sleep 10secs
-             run: sleep 10
+        - name: sleep 10secs
+          run: sleep 10
 
-            -name: deployement
-             run: echo "deploying .... ... ..."
+        - name: deployement
+          run: echo "deploying .... ... ..."
         
