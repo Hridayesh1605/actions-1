@@ -12,8 +12,33 @@ jobs:
       - name: list files
         run: ls -ltrh
 
-      - name: Executing Shell Script
-        run: |
-          chmod +x ascii_artwork.sh
-          ./ascii_artwork.sh
+      - name: Instal, Cowsay
+        run: sudo apt update && sudo apt install cowsay -y
+
+      - name: Generate ASCII Artwork
+        run: cowsay -f dragon "Run for cover, I am dragon ..... RAWR...." >> dragon.txt
+
+      - name: Read file
+        run: cat dragon.txt
+
+      - name: sleep
+        run: sleep 20
+
+    Job2:
+        runs-on: ubuntu-latest
+        steps:
+            -name: Search Existing File
+             run: grep "dragon" dragon.txt
+
+            -name: sleep for 10 secs
+             run: sleep 10
+             
+    Job3:
+        runs-on: ubuntu-latest
+        steps:
+            -name: sleep 10secs
+             run: sleep 10
+
+            -name: deployement
+             run: echo "deploying .... ... ..."
         
